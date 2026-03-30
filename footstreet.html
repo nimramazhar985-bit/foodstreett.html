@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cafe Menu — Flexbox</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 24px;
+    background: #fafafa;
+    color: #111;
+  }
+
+  h1 { margin-bottom: 16px; font-size: 1.25rem; }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .menu-item {
+    flex: 1 0 250px;
+    min-width: 250px;
+    background: white;
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menu-item h3 { margin: 0; font-size: 1rem; }
+  .desc { font-size: 0.9rem; color: #555; margin-top: 4px; flex: 1; }
+  .meta { display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
+  .price { font-weight: 600; }
+  .badge { font-size: 0.75rem; padding: 4px 8px; border-radius: 999px; background:#eee; }
+
+  @media (max-width: 520px) {
+    .menu-item {
+      flex: 1 1 100%;
+      min-width: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Cafe Quick Bites</h1>
+
+  <div class="menu">
+    <article class="menu-item">
+      <h3>Spicy Chicken Wrap</h3>
+      <p class="desc">Grilled chicken, spicy mayo, lettuce, wrapped in a warm tortilla.</p>
+      <div class="meta">
+        <div class="price">Rs. 420</div>
+        <div class="badge">Popular</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>Cheese Burger</h3>
+      <p class="desc">Classic beef patty with cheddar, tomato, onion and house sauce.</p>
+      <div class="meta">
+        <div class="price">Rs. 360</div>
+        <div class="badge">Chef's pick</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>Veggie Panini</h3>
+      <p class="desc">Grilled vegetables, pesto, melty mozzarella on toasted bread.</p>
+      <div class="meta">
+        <div class="price">Rs. 330</div>
+        <div class="badge">V</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>French Fries</h3>
+      <p class="desc">Crispy shoestring fries served with ketchup.</p>
+      <div class="meta">
+        <div class="price">Rs. 180</div>
+        <div class="badge">Side</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>Chicken Nuggets</h3>
+      <p class="desc">Golden bites with a crunchy crust — served with dip.</p>
+      <div class="meta">
+        <div class="price">Rs. 300</div>
+        <div class="badge">Kids</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>Fish & Chips</h3>
+      <p class="desc">Beer-battered fish with fries and tartar sauce.</p>
+      <div class="meta">
+        <div class="price">Rs. 540</div>
+        <div class="badge">Special</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>Hot Dog</h3>
+      <p class="desc">Grilled sausage, caramelized onion, mustard, in a soft bun.</p>
+      <div class="meta">
+        <div class="price">Rs. 280</div>
+        <div class="badge">Quick</div>
+      </div>
+    </article>
+
+    <article class="menu-item">
+      <h3>Paneer Tikka Roll</h3>
+      <p class="desc">Marinated paneer, peppers, onions, wrapped with chutney.</p>
+      <div class="meta">
+        <div class="price">Rs. 400</div>
+        <div class="badge">V</div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
